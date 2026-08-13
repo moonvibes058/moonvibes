@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MoonVibes 🌙 | Neon LoFi Nights</title>
+<meta name="description" content="MoonVibes — neon romantic LoFi, slowed + reverb and late-night music.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#05040b;color:#fff;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 50% 12%,#8c43d933,transparent 25%),radial-gradient(circle at 85% 55%,#ff2f9d18,transparent 30%),#05040b}
+body:after{content:"";position:fixed;inset:0;z-index:-2;opacity:.28;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:75px 75px;animation:stars 18s linear infinite}
+@keyframes stars{to{background-position:75px 75px}}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;background:#05040bcc;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.logo{font-size:22px;font-weight:900}.logo b{color:#ff55b2}nav a{color:#aaa6b8;text-decoration:none;margin-left:22px;font-size:13px}nav a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 20px 70px;position:relative}.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#9c46ff12;filter:blur(30px);animation:pulse 4s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.12);opacity:.65}}
+.hero>div{position:relative;max-width:950px}.moon{width:155px;height:155px;border-radius:50%;margin:auto;background:linear-gradient(145deg,#fff,#c8c0ff);box-shadow:0 0 35px #c5b8ff,0 0 100px #a04cff66;position:relative}.moon:after{content:"";position:absolute;width:155px;height:155px;border-radius:50%;background:#080711;left:48px;top:-13px}
+.badge{display:inline-block;margin-top:32px;padding:8px 15px;border:1px solid #ff65ba66;border-radius:99px;color:#ff9bce;font-size:10px;letter-spacing:3px}.hero h1{font-size:clamp(65px,12vw,150px);line-height:.82;letter-spacing:-8px;margin:24px 0;background:linear-gradient(100deg,#fff,#ffb9e0,#a884ff);-webkit-background-clip:text;color:transparent;text-shadow:0 0 45px #ff55b233}.hero p{max-width:650px;margin:auto;color:#aaa6b8;line-height:1.8;font-size:17px}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:14px 23px;border-radius:99px;text-decoration:none;font-weight:800;border:1px solid #ffffff16;transition:.25s}.btn:hover{transform:translateY(-4px)}.primary{color:#fff;background:linear-gradient(110deg,#ff43a5,#8b5cff);box-shadow:0 0 30px #a348ff55}.ghost{color:#fff;background:#ffffff08}
+.rain{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.25}.rain i{position:absolute;width:1px;height:55px;background:linear-gradient(transparent,#d6caff);top:-70px;animation:fall 1.7s linear infinite}@keyframes fall{to{transform:translateY(110vh)}}
+section{max-width:1150px;margin:auto;padding:95px 6%}.label{color:#ff79bd;text-transform:uppercase;letter-spacing:3px;font-size:10px}h2{font-size:42px;margin:8px 0 30px;letter-spacing:-1px}.sectionhead{text-align:center;margin-bottom:35px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#ffffff0d,#ffffff03);border:1px solid #ffffff13;border-radius:24px;overflow:hidden;transition:.3s}.card:hover{transform:translateY(-8px);border-color:#ff58b655;box-shadow:0 20px 50px #0006}.art{height:220px;display:grid;place-items:center;font-size:58px;background:radial-gradient(circle at 50% 45%,#d8cfff22,transparent 22%),linear-gradient(135deg,#190d31,#6d2265,#171b4d)}.body{padding:20px}.body h3{margin:0;font-size:20px}.body p{color:#9e9aaa;font-size:13px}.play{width:43px;height:43px;border:0;border-radius:50%;cursor:pointer;font-weight:900;background:#fff;color:#111}
+.player{margin-top:22px;padding:18px;border:1px solid #ffffff13;border-radius:22px;background:#ffffff08;display:flex;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 15px 45px #0005}.covermini{width:58px;height:58px;border-radius:17px;background:linear-gradient(135deg,#ff43a5,#8b5cff);display:grid;place-items:center;font-size:24px;box-shadow:0 0 25px #a348ff55}.info{flex:1;min-width:170px}.info span{display:block;color:#9995a8;font-size:12px;margin-top:5px}.file,.player button{padding:10px 13px;border:1px solid #ffffff18;background:#ffffff08;color:white;border-radius:11px;cursor:pointer}.progress{width:100%;accent-color:#ff55b2}
+.channel{margin-top:25px;border:1px solid #ff58b633;border-radius:25px;padding:50px 25px;text-align:center;background:radial-gradient(circle at 50% 0,#a348ff30,transparent 55%),#ffffff05;box-shadow:0 25px 70px #0006}.channel p{color:#a5a1b0}
+.quote{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.box{padding:35px;border:1px solid #ffffff13;border-radius:25px;background:#ffffff06}.big{font-size:clamp(35px,5vw,60px);font-weight:900;line-height:1.02;letter-spacing:-2px}
+footer{padding:30px 6%;border-top:1px solid #ffffff12;color:#777383;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){nav div:nth-child(2){display:none}.cards,.quote{grid-template-columns:1fr}.hero h1{letter-spacing:-5px}.channel .btn{margin-top:12px}}
+</style>
+
+<style>
+#latest-mashup{max-width:1150px;margin:auto;padding:70px 6%}
+.latest-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center;padding:30px;border:1px solid #ff58b633;border-radius:28px;background:radial-gradient(circle at 80% 0,#9b4dff24,transparent 45%),linear-gradient(135deg,#ffffff0a,#ffffff03);box-shadow:0 25px 70px #0007}
+.latest-copy{padding:20px}
+.latest-copy h2{font-size:clamp(38px,5vw,58px);margin:10px 0 16px}
+.latest-copy p{color:#aaa6b8;line-height:1.8;max-width:500px}
+.yt-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid #ffffff18;background:#000;box-shadow:0 0 40px #8d5cff25}
+.yt-frame iframe{width:100%;height:100%;border:0}
+@media(max-width:800px){.latest-wrap{grid-template-columns:1fr;padding:18px}.latest-copy{padding:10px}.latest-copy .btn{width:100%;text-align:center}}
+</style>
+
+
+<style>
+.channel-player{width:100%;height:100%;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;color:#fff;background:radial-gradient(circle at 50% 35%,#ff55b233,transparent 35%),linear-gradient(135deg,#170b2c,#32104a,#11152f);transition:.3s}
+.channel-player:hover{transform:scale(1.01);filter:brightness(1.12)}
+.channel-glow{font-size:64px;filter:drop-shadow(0 0 25px #c5b8ff)}
+.channel-player strong{font-size:26px}.channel-player span{color:#c6bfd2;font-size:13px}
+</style>
+
+<style>
+.support-box{padding:60px 25px;text-align:center;border:1px solid #ff58b633;border-radius:28px;background:radial-gradient(circle at 50% 0,#ff55b21c,transparent 52%),linear-gradient(135deg,#ffffff08,#ffffff03);box-shadow:0 25px 70px #0006}
+.support-box>p{max-width:650px;margin:0 auto 28px;color:#aaa6b8;line-height:1.8}
+.support-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:820px;margin:30px auto}
+.support-card{padding:28px;border:1px solid #ffffff12;border-radius:22px;background:#ffffff06}
+.support-icon{font-size:34px}.support-card h3{margin:10px 0}.support-card p{font-size:13px;color:#9995a8;line-height:1.7;min-height:44px}
+.thanks{margin-top:25px;color:#777383;font-size:13px}
+@media(max-width:800px){.support-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="rain" id="rain"></div>
+<nav><div class="logo">🌙 Moon<b>Vibes</b></div><div><a href="#music">Music</a><a href="#vibe">Vibe</a><a href="#support">Support</a><a href="#channel">YouTube</a></div><a class="btn ghost" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">▶ Channel</a></nav>
+
+<header class="hero"><div><div class="moon"></div><div class="badge">✦ NEON LOFI AFTER DARK</div><h1>MoonVibes</h1><p>Lost in the night. Found in the music.<br>Romantic LoFi, slowed + reverb and sounds made for your midnight moments.</p><div class="buttons"><a class="btn primary" href="#music">🎧 Start Listening</a><a class="btn ghost" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">▶ Watch on YouTube</a></div></div></header>
+
+
+<section id="latest-mashup">
+  <div class="latest-wrap">
+    <div class="latest-copy">
+      <div class="label">Fresh from MoonVibes</div>
+      <h2>Latest Mashup 🎧</h2>
+      <p>Put your headphones on and drift into the latest MoonVibes mix. New romantic LoFi vibes, slowed + reverb and late-night sounds.</p>
+      <a class="btn primary" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">▶ Listen on YouTube</a>
+    </div>
+    <div class="yt-frame">
+      <a href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank" class="channel-player" aria-label="Open MoonVibes YouTube channel"><div class="channel-glow">🌙</div><strong>MoonVibes</strong><span>▶ Open Latest Mashups on YouTube</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="music"><div class="sectionhead"><div class="label">Tonight's selection</div><h2>Enter the Vibe</h2></div><div class="cards">
+<div class="card"><div class="art">🌙</div><div class="body"><h3>Midnight Love</h3><p>Romantic • Late Night</p><button class="play" onclick="pick('Midnight Love')">▶</button></div></div>
+<div class="card"><div class="art" style="filter:hue-rotate(35deg)">🌧️</div><div class="body"><h3>Rainy Memories</h3><p>Slowed + Reverb • Dreamy</p><button class="play" onclick="pick('Rainy Memories')">▶</button></div></div>
+<div class="card"><div class="art" style="filter:hue-rotate(-30deg)">💜</div><div class="body"><h3>Lost In Memories</h3><p>Chill • Sleep • Study</p><button class="play" onclick="pick('Lost In Memories')">▶</button></div></div>
+</div>
+<div class="player"><div class="covermini">🌙</div><div class="info"><strong id="track">MoonVibes Player</strong><span id="status">Choose your own audio file to play it here</span></div><label class="file">🎵 Choose Song<input id="file" type="file" accept="audio/*" hidden></label><button id="play" onclick="toggle()">▶</button><input id="progress" class="progress" type="range" min="0" max="100" value="0"><audio id="audio"></audio></div></section>
+
+<section id="vibe"><div class="quote"><div class="box"><div class="label">The MoonVibes feeling</div><div class="big">“Music for the nights you don't want to end.”</div></div><div class="box"><div class="label">Made for</div><h2>Study. Chill. Love.</h2><p>Rainy windows, late-night drives, quiet rooms and thoughts that only make sense after midnight.</p></div></div></section>
+
+<section id="channel"><div class="channel"><div class="label">Official MoonVibes</div><h2>Keep the night playing.</h2><p>New romantic LoFi mixes, slowed + reverb and late-night vibes on YouTube.</p><a class="btn primary" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">♥ Subscribe on YouTube</a></div></section>
+
+
+<section id="support">
+  <div class="support-box">
+    <div class="label">Support the vibe</div>
+    <h2>Support MoonVibes 💜</h2>
+    <p>If MoonVibes makes your night better, you can support the channel and help us create more mixes.</p>
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon">☕</div>
+        <h3>Support the Creator</h3>
+        <p>Every little bit helps us keep creating new MoonVibes content.</p>
+        <button class="btn primary" onclick="supportMessage()">💜 Support MoonVibes</button>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">▶</div>
+        <h3>Subscribe & Share</h3>
+        <p>The free way to support MoonVibes: listen, subscribe and share your favourite mixes.</p>
+        <a class="btn ghost" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">Visit YouTube</a>
+      </div>
+    </div>
+    <div class="thanks">Thank you for being part of the MoonVibes family. 🌙</div>
+  </div>
+</section>
+
+<footer><span>© 2026 MoonVibes</span><span>Neon nights • LoFi vibes 🌙</span></footer>
+<script>
+const rain=document.getElementById('rain');for(let i=0;i<35;i++){const x=document.createElement('i');x.style.left=Math.random()*100+'%';x.style.animationDelay=Math.random()*2+'s';x.style.opacity=.2+Math.random()*.6;rain.appendChild(x)}
+const a=document.getElementById('audio'),f=document.getElementById('file'),b=document.getElementById('play'),p=document.getElementById('progress'),t=document.getElementById('track'),s=document.getElementById('status');
+function pick(x){t.textContent=x;s.textContent='Choose an audio file below to play it';document.querySelector('.player').scrollIntoView({behavior:'smooth',block:'center'})}
+f.onchange=()=>{if(!f.files.length)return;a.src=URL.createObjectURL(f.files[0]);t.textContent=f.files[0].name;s.textContent='Ready to play';a.play();b.textContent='❚❚'}
+function toggle(){if(!a.src)return;if(a.paused){a.play();b.textContent='❚❚'}else{a.pause();b.textContent='▶'}}
+a.ontimeupdate=()=>p.value=a.duration?a.currentTime/a.duration*100:0;p.oninput=()=>{if(a.duration)a.currentTime=p.value/100*a.duration}
+</script>
+<script>
+function supportMessage(){alert("Your payment/support link can be added here when you are ready.");}
+</script></body>
+</html>
