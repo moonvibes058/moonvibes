@@ -52,6 +52,28 @@ footer{padding:30px 6%;border-top:1px solid #ffffff12;color:#777383;font-size:12
 .thanks{margin-top:25px;color:#777383;font-size:13px}
 @media(max-width:800px){.support-grid{grid-template-columns:1fr}}
 </style>
+
+<style>
+.premium-support{position:relative;overflow:hidden;max-width:980px;margin:70px auto;padding:1px;border-radius:34px;background:linear-gradient(135deg,#ff63bd,#9c68ff 45%,#55d7ff);box-shadow:0 30px 90px rgba(120,70,220,.25)}
+.support-inner{position:relative;overflow:hidden;margin:1px;border-radius:33px;padding:58px 34px;text-align:center;background:radial-gradient(circle at 50% 0,rgba(255,91,182,.16),transparent 38%),linear-gradient(145deg,#100b1d,#171126 55%,#0b0d19)}
+.support-badge{display:inline-block;padding:8px 15px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:10px;letter-spacing:2.2px;color:#d9bfff;background:rgba(255,255,255,.04)}
+.premium-support h2{margin:18px 0 10px;font-size:clamp(34px,5vw,54px);letter-spacing:-1.5px}.premium-support h2 span{filter:drop-shadow(0 0 14px #ff55b8)}
+.support-sub{max-width:600px;margin:0 auto;color:#aaa4b8;line-height:1.7;font-size:14px}
+.payment-layout{max-width:760px;margin:36px auto 25px;display:grid;grid-template-columns:270px 1fr;gap:28px;align-items:center;text-align:left}
+.qr-card{padding:18px;border-radius:26px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);box-shadow:inset 0 1px rgba(255,255,255,.07)}
+.qr-frame{padding:13px;background:#fff;border-radius:18px}.qr-frame img{display:block;width:100%;height:auto;border-radius:8px}.scan-text{text-align:center;margin-top:13px;font-size:9px;letter-spacing:2px;color:#aaa0b9}
+.payment-info{padding:8px}.secure-pill{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(94,255,194,.08);border:1px solid rgba(94,255,194,.15);color:#8df1c6;font-size:9px;letter-spacing:1px}
+.payment-info h3{font-size:27px;margin:15px 0 7px}.muted{color:#9993a8;font-size:13px;line-height:1.6}
+.upi-box{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:20px 0;padding:14px 16px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+.upi-box span{font-size:10px;color:#8e879d;letter-spacing:1px}.upi-box strong{font-size:14px;color:#eee}
+.premium-pay{display:flex;align-items:center;gap:10px;justify-content:center;padding:15px 20px;border-radius:15px;text-decoration:none;font-weight:800;color:#fff;background:linear-gradient(100deg,#ff4eae,#8d5cff);box-shadow:0 12px 30px rgba(177,72,255,.25);transition:.25s}
+.premium-pay:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(177,72,255,.38)}.premium-pay b{margin-left:auto}
+.trust-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:13px;color:#817a90;font-size:10px}
+.support-footer{margin-top:22px;color:#777083;font-size:11px;letter-spacing:.2px}
+.support-orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.2;pointer-events:none}.orb-one{width:180px;height:180px;background:#ff4eae;left:-70px;top:40px}.orb-two{width:180px;height:180px;background:#735cff;right:-70px;bottom:20px}
+@media(max-width:720px){.premium-support{margin:45px 15px}.support-inner{padding:42px 20px}.payment-layout{grid-template-columns:1fr;max-width:360px}.qr-card{max-width:270px;margin:auto}.payment-info{text-align:center}.upi-box{flex-direction:column}.trust-row{justify-content:center}}
+</style>
+
 </head>
 <body>
 <div class="rain" id="rain"></div>
@@ -86,28 +108,50 @@ footer{padding:30px 6%;border-top:1px solid #ffffff12;color:#777383;font-size:12
 <section id="channel"><div class="channel"><div class="label">Official MoonVibes</div><h2>Keep the night playing.</h2><p>New romantic LoFi mixes, slowed + reverb and late-night vibes on YouTube.</p><a class="btn primary" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">♥ Subscribe on YouTube</a></div></section>
 
 
-<section id="support">
-  <div class="support-box">
-    <div class="label">Support the vibe</div>
-    <h2>Support MoonVibes 💜</h2>
-    <p>If MoonVibes makes your night better, you can support the channel and help us create more mixes.</p>
-    <div class="support-grid">
-      <div class="support-card">
-        <div class="support-icon">☕</div>
-        <h3>Support the Creator</h3>
-        <p>Every little bit helps us keep creating new MoonVibes content.</p>
-        <button class="btn primary" onclick="supportMessage()">💜 Support MoonVibes</button>
+
+
+<section id="support" class="premium-support">
+  <div class="support-orb orb-one"></div>
+  <div class="support-orb orb-two"></div>
+  <div class="support-inner">
+    <div class="support-badge">✦ SUPPORT THE VIBE ✦</div>
+    <h2>Keep MoonVibes Alive <span>💜</span></h2>
+    <p class="support-sub">If our music adds a little peace to your night, your support helps us create more dreamy sounds.</p>
+
+    <div class="payment-layout">
+      <div class="qr-card">
+        <div class="qr-frame">
+          <img src="moonvibes-upi-qr.png" alt="MoonVibes UPI QR Code">
+        </div>
+        <div class="scan-text">SCAN TO SUPPORT</div>
       </div>
-      <div class="support-card">
-        <div class="support-icon">▶</div>
-        <h3>Subscribe & Share</h3>
-        <p>The free way to support MoonVibes: listen, subscribe and share your favourite mixes.</p>
-        <a class="btn ghost" href="https://www.youtube.com/channel/UCH0KujB9Yx31v3pYn5VZZIg" target="_blank">Visit YouTube</a>
+
+      <div class="payment-info">
+        <div class="secure-pill">🔒 UPI PAYMENT</div>
+        <h3>Support MoonVibes</h3>
+        <p class="muted">Choose your own amount and support the music you love.</p>
+
+        <div class="upi-box">
+          <span>UPI ID</span>
+          <strong>siddharthsh@fam</strong>
+        </div>
+
+        <a class="premium-pay" href="upi://pay?pa=siddharthsh@fam&pn=MoonVibes&cu=INR">
+          <span>💜</span> Support via UPI <b>→</b>
+        </a>
+
+        <div class="trust-row">
+          <span>✓ Your choice of amount</span>
+          <span>✓ Powered by UPI</span>
+        </div>
       </div>
     </div>
-    <div class="thanks">Thank you for being part of the MoonVibes family. 🌙</div>
+
+    <div class="support-footer">Every bit of support means a lot. 🌙</div>
   </div>
 </section>
+
+
 
 <footer><span>© 2026 MoonVibes</span><span>Neon nights • LoFi vibes 🌙</span></footer>
 <script>
